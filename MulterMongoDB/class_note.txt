@@ -1,0 +1,27 @@
+1) Download node modules
+    => Express
+    => Cors
+    => Body-Parser
+    => Mongodb
+    => Multer
+
+    > npm i express cors body-parser mongodb multer --save
+
+2) Create the index.html file
+
+        index.html
+
+    Finally "uploadImages" request is ready (POST)
+
+    with "myPhoto" name
+
+
+3) implement the Node server
+
+        server.js
+
+4) Create the database in mongodb
+
+    URL : mongodb+srv://biswanath44:nayak80@cluster0.v7mo1bs.mongodb.net/multer?retryWrites=true&w=majority
+
+    Collection Name : images

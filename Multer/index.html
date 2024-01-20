@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multer</title>
+    <style type="text/css">
+        div{
+            background-color: gray;
+            padding: 1rem; /** 1rem-10px*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!--Single File-->
+        <h2>Upload any type of single File</h2>
+        <form action="/singleFile" enctype="multipart/form-data" method="post">
+            <input type="file" name="myFile">
+            <br><br>
+            <input type="submit">
+        </form>
+        <br><br>
+
+        <!--Multiple Files-->
+        <h2>Upload multiple Files (any things...)</h2>
+        <form action="/multipleFile" enctype="multipart/form-data" method="post">
+            <input type="file" name="myFile" multiple>
+            <br><br>
+            <input type="submit">
+        </form>
+        <br><br>
+
+        <!--PHOTO Any type of (jpg,jpeg,png,fig etc..)-->
+        <h2>Upload single but all type of photos</h2>
+        <form action="/uploadphotos" method="post" enctype="multipart/form-data">
+            <input type="file" name="pictures" accept="image/* "> <!--* is used here for Allowing every images type(jpg,jpeg,png,fig etc..)-->
+            <br><br>
+            <input type="submit" value="Upload Images" >
+        </form>
+        <br><br>
+
+         <!--Upload muliple PHOTO and Any type of (jpg,jpeg,png,fig etc..)-->
+         <h2>Upload multiple photos</h2>
+         <form action="/photos" method="post" enctype="multipart/form-data">
+            <input type="file" name="myphotos" accept="image/* " multiple> <!--* is used here for Allowing every images type(jpg,jpeg,png,fig etc..)-->
+            <br><br>
+            <input type="submit" value="Upload Images" >
+        </form>
+        <br><br>
+
+        <!--PHOTO only PNG type allowed to submit-->
+        <h2>Upload only .png type photos</h2>
+        <form action="/uploadphoto" method="post" enctype="multipart/form-data">
+            <input type="file" name="picture" accept="image/png">
+            <br><br>
+            <input type="submit" value="Upload an Image">
+        </form>
+        <br><br>
+
+
+    </div>
+</body>
+</html>
